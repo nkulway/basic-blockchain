@@ -35,13 +35,15 @@ class Blockchain {
   }
 
   checkValidity(){
+    // checking the validity of the hash
       for (let i = 1; i < this.blockchain.length; i++) {
           const currentBlock = this.blockchain[i];
           const nextBlock = this.blockchain[i-1];
-
+    // checking the curent block hash
       if (currentBlock.hash !== currentBlock.computeHash()){
           return false;
       }
+    // comparing the current block with the next block hash  
       if (currentBlock.nextHash !== nextBlock.hash){
           return false;
       }
