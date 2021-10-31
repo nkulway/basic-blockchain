@@ -1,4 +1,4 @@
-const SHA256 = require("crypto.js/sha256");
+const SHA256 = require("crypto-js/sha256");
 class BlockCrypto {
   constructor(index, current_time, info, nextHash = " ") {
     this.index = index;
@@ -16,7 +16,7 @@ class BlockCrypto {
 
 class Blockchain {
   constructor() {
-    this.blockchain = [this.startGenesisBlock()];
+    this.blockchain = [this.initGenesisBlock()];
   }
   // first block on the chain created with an index of 0
   initGenesisBlock() {
@@ -49,3 +49,12 @@ class Blockchain {
       }
   }
 }
+
+
+let thecoin = new Blockchain();
+
+thecoin.addNewBlock(new BlockCrypto(1, "10/28/2021", {sender: "Nick Kulway", recipient: "Anna Wing", quantity: 20}));
+
+thecoin.addNewBlock(new BlockCrypto(2, "10/31/2021", {sender: "Jason Brush", recipient: "Tabitha Red", quantity: 362}));
+
+console.log(JSON.stringify(thecoin, null, 4));

@@ -1,0 +1,23 @@
+{
+  "name": "basic-blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "thecoin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkulway/basic-blockchain.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkulway/basic-blockchain/issues"
+  },
+  "homepage": "https://github.com/nkulway/basic-blockchain#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
